@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.77248302.css",
+    "main.js": "/portfolio/static/js/main.26165b82.js",
+    "static/js/787.9edba2b7.chunk.js": "/portfolio/static/js/787.9edba2b7.chunk.js",
+    "static/media/css_c.png": "/portfolio/static/media/css_c.b4f9a7ab528fc8d25065.png",
+    "static/media/mine.png": "/portfolio/static/media/mine.96360ed544468db5f316.png",
+    "static/media/logo.png": "/portfolio/static/media/logo.6b1999030b1c87d19d6d.png",
+    "static/media/Css.PNG": "/portfolio/static/media/Css.12b21fd7bb1331e99b14.PNG",
+    "static/media/html.PNG": "/portfolio/static/media/html.984998954c6a04d262d5.PNG",
+    "static/media/Hero_Illustration.svg": "/portfolio/static/media/Hero_Illustration.e55d8172b8edb500b1a981d6b4b2a030.svg",
+    "static/media/Illustration_Contact.svg": "/portfolio/static/media/Illustration_Contact.b2d691ee0b36cabfdb470475705e24a0.svg",
+    "static/media/Abstract-02.svg": "/portfolio/static/media/Abstract-02.788fd5a2aedaadfa506e15f7e07b4fd5.svg",
+    "static/media/Abstract-08.svg": "/portfolio/static/media/Abstract-08.5bef3ebeb561e3cdbffdbac1e863d131.svg",
+    "static/media/Abstract-04.svg": "/portfolio/static/media/Abstract-04.d4cd70b0c79824047cfa241d639e5e93.svg",
+    "static/media/Abstract-07.svg": "/portfolio/static/media/Abstract-07.2cbac22d6fed6c6da42a5bad679f9d38.svg",
+    "static/media/Abstract-03.svg": "/portfolio/static/media/Abstract-03.f0e898e2982b18737cc1893606da05b4.svg",
+    "index.html": "/portfolio/index.html",
+    "static/media/Check.svg": "/portfolio/static/media/Check.1c2d9c0cdf6ae0e4358ee9e6a7753ef9.svg",
+    "static/media/Robe.svg": "/portfolio/static/media/Robe.d85dbb87aae608730748e9716549e9ba.svg",
+    "main.77248302.css.map": "/portfolio/static/css/main.77248302.css.map",
+    "main.26165b82.js.map": "/portfolio/static/js/main.26165b82.js.map",
+    "787.9edba2b7.chunk.js.map": "/portfolio/static/js/787.9edba2b7.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.77248302.css",
+    "static/js/main.26165b82.js"
+  ]
+}
