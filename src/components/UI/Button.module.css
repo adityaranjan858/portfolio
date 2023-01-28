@@ -1,0 +1,15 @@
+.gen_btn{
+    border: 1px solid #eba920;
+    padding: 0.3rem 1.5rem;
+    border-radius: 2rem;
+}
+
+.gen_btn:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+  .gen_btn:hover{
+    background-color: #eba920;
+    color:white;
+  }

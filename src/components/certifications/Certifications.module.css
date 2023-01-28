@@ -1,0 +1,14 @@
+.experience_container{
+    position: relative;
+}
+.abstract_img_7 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.abstract_img_8 {
+    bottom: 17%;
+    position: absolute;
+    right: 0;
+}
