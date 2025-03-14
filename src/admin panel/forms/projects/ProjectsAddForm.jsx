@@ -35,17 +35,16 @@ const ProjectsAddForm = () => {
       valid = false;
     }
 
-    if (inputVal.liveLink === "" || inputVal.liveLink.startsWith("http")) {
+    if (inputVal.liveLink === "" || (!inputVal.liveLink.startsWith("http://") && !inputVal.liveLink.startsWith("https://"))) {
       errors.liveLink = "Please provide a valid live link (e.g., https://example.com)";
       valid = false;
     }
     
-    if (
-      inputVal.githubLink === "" || inputVal.githubLink.startsWith("https://github.com/")
-    ) {
+    if (inputVal.githubLink === "" || !inputVal.githubLink.startsWith("https://github.com/")) {
       errors.githubLink = "Please provide a valid GitHub link (e.g., https://github.com/username/repo)";
       valid = false;
     }
+    
     setErrorMsg(errors);
     return valid;
   };
@@ -163,7 +162,8 @@ const ProjectsAddForm = () => {
             <div className={`${style["form-control"]}`}>
               <label htmlFor="githubLink">Github Link:</label>
               <input
-                placeholder="Ex: https://github.username.xyz"
+placeholder="Ex: https://github.com/username/repo"
+
                 className={`border placeholder:text-gray-500 border-gray-500 focus:outline-none  p-2 mx-2 mt-2 rounded-xl ${
                   errorMsg.githubLink
                     ? "border-red-500 text-red-600 focus:ring-red-500 focus:border-red-500 "
