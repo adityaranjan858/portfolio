@@ -6,9 +6,9 @@ import icon from '../assets/manIcon.png';
 
 const HeroSection = () => {
   const downloadHandler = () => {
-    window.open("../public/Aditya_Ranjan Resume.pdf", "_blank");
+    window.open("../public/Aditya_Ranjan_Resume.pdf", "_blank");
 
-  }
+  } 
   return (
     <>
       <section className="bg-gray-900 text-white  flex items-center justify-center px-6 my-12">

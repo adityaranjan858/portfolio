@@ -1,12 +1,55 @@
-# React + Vite
+# Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
+This is my personal portfolio website built using **React, Vite, and TailwindCSS**. The portfolio showcases my projects, skills, and experiences with a modern and dynamic UI.
 
-Currently, two official plugins are available:
+## Features
+- **React + Vite:** Fast development and optimized build process.
+- **TailwindCSS:** Utility-first CSS framework for styling.
+- **Mock API:** Used to simulate real API calls for project data.
+- **Redux Toolkit:** State management for efficient data handling.
+- **Admin Dashboard:** Secure dashboard for managing portfolio content.
+- **Dynamic Project Section:** Fetches and displays projects dynamically.
+- **React Router:** Enables seamless client-side routing.
+- **Lazy Loading:** Improves performance by loading components on demand.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Installation & Setup
 
-## Expanding the ESLint configuration
+### Prerequisites
+Make sure you have the following installed:
+- [Node.js](https://nodejs.org/)
+- [Git](https://git-scm.com/)
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Steps
+1. Clone the repository:
+   ```sh
+   git clone "https://github.com/adityaranjan858/portfolio.git"
+   ```
+2. Navigate to the project directory:
+   ```sh
+   cd your-portfolio
+   ```
+3. Install dependencies:
+   ```sh
+   npm install
+   ```
+4. Start the development server:
+   ```sh
+   npm run dev
+   ```
+
+## Usage
+- Open [http://localhost:5173](http://localhost:5173) in your browser to view the portfolio.
+- Navigate through different sections using the menu.
+- Explore the admin dashboard (if applicable) to manage projects dynamically.
+
+## Deployment
+This portfolio can be deployed using **Netlify, Vercel, or GitHub Pages**. To build for production, run:
+```sh
+npm run build
+```
+
+## License
+This project is open-source and available under the [MIT License](LICENSE).
+
+

@@ -21,17 +21,17 @@ const About = () => {
             <div className="flex space-x-4">
               <div>
                 <div className="flex items-center">
-                  <span className="text-3xl font-bold">5</span>
-                  <span className="text-primary text-2xl font-bold">+</span>
+                  <span className="text-4xl font-bold">5</span>
+                  <span className="text-primary text-3xl font-bold">+</span>
                 </div>{" "}
-                <small className="font-semibold text-gray-400 ">Projects Done</small>
+                <small className="font-bold text-gray-400 ">Projects Done</small>
               </div>
               <div>
                 <div className="flex items-center">
-                  <span className="text-3xl font-bold">2</span>
-                  <span className="text-primary text-2xl font-bold">+</span>
+                  <span className="text-4xl font-bold">2</span>
+                  <span className="text-primary text-3xl font-bold">+</span>
                 </div>{" "}
-                <small className="font-semibold text-gray-400 ">Years of Experience</small>
+                <small className="font-bold  text-gray-400 ">Years of Experience</small>
               </div>
             </div>
             <div>

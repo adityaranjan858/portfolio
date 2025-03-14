@@ -65,7 +65,7 @@ const ProjectsCard = ({ projects, visibility, videos }) => {
                       </ul>
                     </div>
                     <div>
-                      <a href={item.liveLink} className="">
+                      <a href={item.liveLink} className="" target="_blank">
                         <i className="fa-solid text-sky-500 text-5xl hover:text-sky-600 fa-square-arrow-up-right"></i>
                       </a>
                     </div>
@@ -77,6 +77,7 @@ const ProjectsCard = ({ projects, visibility, videos }) => {
             <div className="flex justify-between flex-wrap ">
               <a
                 href={item.githubLink}
+                target="_blank"
                 className="border border-primary rounded-3xl px-4 sm:px-6 md:px-8 py-2 hover:border-primary-hover hover:bg-primary hover:text-white text-primary "
               >
                 Github <i className="fa-solid ms-2 fa-up-right-from-square"></i>

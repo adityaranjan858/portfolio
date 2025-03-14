@@ -8,7 +8,7 @@ const Footer = () => {
                 <div>
                     <img className='w-10 h-10' src={logoIcon} alt="logo" />
                 </div>
-                <div><span className="text-gray-400 space-x-2">@{new Date().getFullYear()}</span>Aditya Ranjan</div>
+                <div className='space-x-2'><span className="text-gray-400 ">@{new Date().getFullYear()}</span> <span>Aditya Ranjan</span></div>
             </div>
         </section>
     </>

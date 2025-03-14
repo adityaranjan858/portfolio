@@ -41,7 +41,7 @@ const Contacts = () => {
               >
                 <i className="fa-solid fa-envelope"></i>
               </a>
-                <a href="https://wa.me/9144154686" className="text-white p-3 rounded-full transition hover:text-primary border border-gray-900 hover:border-primary flex items-center justify-center w-10 h-10"> <i className="fa-brands fa-whatsapp"></i></a>
+                <a href="https://wa.me/9144154686" target="_blank" className="text-white p-3 rounded-full transition hover:text-primary border border-gray-900 hover:border-primary flex items-center justify-center w-10 h-10"> <i className="fa-brands fa-whatsapp"></i></a>
             </div>
           </div>
 
