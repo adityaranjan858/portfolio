@@ -1,0 +1,1 @@
+export const PROJECTS_API_KEY = "https://651bca9f194f77f2a5aedd73.mockapi.io/projects";
