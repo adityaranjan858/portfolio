@@ -6,7 +6,7 @@ import icon from '../assets/manIcon.png';
 
 const HeroSection = () => {
   const downloadHandler = () => {
-    window.open("../public/Aditya_Ranjan_Resume.pdf", "_blank");
+    window.open("./Aditya_Ranjan_Resume.pdf", "_blank");
 
   } 
   return (
