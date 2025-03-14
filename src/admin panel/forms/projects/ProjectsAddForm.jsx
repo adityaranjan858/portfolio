@@ -34,7 +34,7 @@ const ProjectsAddForm = () => {
       errors.technology = "Technology is required";
       valid = false;
     }
-    const urlPattern = /^(https?:\/\/)([a-zA-Z0-9.-]+)\.(com|in|org|net|io|co|xyz|dev|gov|edu)(\/[^\s]*)?$/i;
+    const urlPattern = /^(https?:\/\/)([a-zA-Z0-9.-]+)\.(com|in|org|net|io|co|xyz|dev|gov|edu|app)(\/[^\s]*)?$/i;
 
     if (inputVal.liveLink === "" || !urlPattern.test(inputVal.liveLink)) {
       errors.liveLink = "Please provide a valid live link (e.g., https://example.com)";
