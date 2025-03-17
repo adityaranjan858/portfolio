@@ -15,18 +15,18 @@ import vite from "../assets/vite.png";
 const Skills = () => {
 
   const skillIcons = [
+    {name : "React", icon : react},
+    {name : "JavaScript", icon : js},
+    {name : "Redux Toolkit", icon : redux},
+    {name : "REST APIs", icon : restapi},
+    {name : "Tailwind CSS", icon : tailwind},
     {name : "HTML", icon : html},
     {name : "CSS", icon : css},
+    {name : "Vite", icon : vite},
     {name : "BootStrap", icon : bootstrap},
-    {name : "JavaScript", icon : js},
-    {name : "React", icon : react},
-    {name : "Tailwind CSS", icon : tailwind},
-    {name : "Redux Toolkit", icon : redux},
     {name : "Git/Github", icon : github},
     {name : "Jest", icon : jest},
-    {name : "REST APIs", icon : restapi},
     {name : "React Testing Library", icon : rtl},
-    {name : "Vite", icon : vite}
   ];
 
   return (

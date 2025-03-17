@@ -40,7 +40,14 @@ const handleInputChange = (e) => {
 
 const submitHandler = (e) => {
     e.preventDefault()
-    dispatch(updateProject(inputVal))
+    const trimmedValues = {
+      id : inputVal.id,
+      heading: inputVal.heading.trim(),
+      technology: inputVal.technology.trim(),
+      liveLink: inputVal.liveLink.trim(),
+      githubLink: inputVal.githubLink.trim(),
+    }
+    dispatch(updateProject(trimmedValues))
     navigate("/admin/projectsComp")
 }
 

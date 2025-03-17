@@ -6,10 +6,9 @@ const About = () => {
       <section className=" text-white flex items-center justify-center px-6 py-12">
         <div className="bg-gray-700 p-6 rounded-lg">
           <p className=" pb-3 w-full text-justify sm:text-left sm:w-10/12">
-             Welcome! I'm
-            a frontend developer dedicated to crafting smooth and intuitive user
+             Welcome! I'm  <span className="text-primary ">Aditya Ranjan</span>, a <span className="text-primary ">Frontend Developer</span>  dedicated to crafting smooth and intuitive user
             experiences with modern web technologies. With a strong foundation
-            in React.js and JavaScript, I enjoy transforming ideas into visually
+            in <span className="text-primary ">React.js</span>  and <span className="text-primary ">JavaScript</span> , I enjoy transforming ideas into visually
             engaging and functional interfaces. My journey in tech has been
             driven by continuous learning, problem-solving, and a passion for
             building interactive digital experiences. Despite a 1.8-year career
@@ -28,8 +27,8 @@ const About = () => {
               </div>
               <div>
                 <div className="flex items-center">
-                  <span className="text-4xl font-bold">2</span>
-                  <span className="text-primary text-3xl font-bold">+</span>
+                  <span className="text-4xl font-bold">2.8</span>
+                  {/* <span className="text-primary text-3xl font-bold">+</span> */}
                 </div>{" "}
                 <small className="font-bold  text-gray-400 ">Years of Experience</small>
               </div>

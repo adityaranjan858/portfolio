@@ -23,35 +23,43 @@ const ProjectsAddForm = () => {
     setErrorMsg({ ...errorMsg, [e.target.name]: "" });
   };
 
-  const validation = () => {
+  const validation = (values) => {
     let valid = true;
     let errors = {};
-    if (inputVal.heading === "") {
+  
+    if (values.heading  === "") {
       errors.heading = "Heading is required";
       valid = false;
     }
-    if (inputVal.technology === "") {
-      errors.technology = "Technology is required";
+    if (values.technology === "" || !/[.,;!]$/.test(values.technology)) {
+      errors.technology = "Technology is required and must end with a punctuation mark (.,;!?).";
       valid = false;
     }
-
-    if (inputVal.liveLink === "" || (!inputVal.liveLink.startsWith("http://") && !inputVal.liveLink.startsWith("https://"))) {
+  
+    if (values.liveLink && (!values.liveLink.startsWith("http://") && !values.liveLink.startsWith("https://"))) {
       errors.liveLink = "Please provide a valid live link (e.g., https://example.com)";
       valid = false;
     }
-    
-    if (inputVal.githubLink === "" || !inputVal.githubLink.startsWith("https://github.com/")) {
+  
+    if (values.githubLink && !values.githubLink.startsWith("https://github.com/")) {
       errors.githubLink = "Please provide a valid GitHub link (e.g., https://github.com/username/repo)";
       valid = false;
     }
-    
+  
     setErrorMsg(errors);
     return valid;
   };
+  
   const submitHandler = (e) => {
     e.preventDefault();
-    if (validation() === false) return;
-    dispatch(addProject(inputVal));
+    const trimmedValues = {
+      heading: inputVal.heading.trim(),
+      technology: inputVal.technology.trim(),
+      liveLink: inputVal.liveLink.trim(),
+      githubLink: inputVal.githubLink.trim(),
+    }
+    if (!validation(trimmedValues)) return;
+    dispatch(addProject(trimmedValues));
     dispatch(toggle());
     setInputVal({
       heading: "",

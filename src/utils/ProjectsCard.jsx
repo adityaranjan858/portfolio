@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from "react";
 import Button from "./Button";
-import heroImage from "../assets/heroImage.png";
+import projectSampleImage from "../assets/page-not-found.png";
 import { toggle } from "../store/slices/projectsSlice";
 import { useDispatch } from "react-redux";
 import Modal from "./Modal";
 
-const ProjectsCard = ({ projects, visibility, videos }) => {
+const ProjectsCard = ({ projects, visibility, videos, images }) => {
   const dispatch = useDispatch();
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
   const [isRotated, setIsRotated] = useState(false);
-  const [videoId, setVideoId] = useState({})
-  
+  const [videoId, setVideoId] = useState({});
+
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768);
@@ -31,6 +31,9 @@ const ProjectsCard = ({ projects, visibility, videos }) => {
     }
   }, [visibility, isMobile]);
 
+  console.log(images);
+  console.log(projects);
+
   return (
     <>
       {projects.length > 0 &&
@@ -42,8 +45,8 @@ const ProjectsCard = ({ projects, visibility, videos }) => {
             <div className="space-y-4">
               <div>
                 <img
-                  className="mx-auto border block rounded-2xl w-full h-auto sm:mx-0 sm:shrink-0"
-                  src={heroImage}
+                  className="mx-auto border block rounded-2xl w-full hover:scale-105 transition ease-in-out duration-500 h-auto sm:mx-0 sm:shrink-0 "
+                  src={images[item.heading] || projectSampleImage}
                   alt="projectSampleImage"
                 />
               </div>
@@ -65,9 +68,13 @@ const ProjectsCard = ({ projects, visibility, videos }) => {
                       </ul>
                     </div>
                     <div>
-                      <a href={item.liveLink} className="" target="_blank">
-                        <i className="fa-solid text-sky-500 text-5xl hover:text-sky-600 fa-square-arrow-up-right"></i>
-                      </a>
+                      {item.liveLink === "" ? (
+                        <i className="fa-solid text-gray-400 text-5xl cursor-not-allowed fa-square-arrow-up-right"></i>
+                      ) : (
+                        <a href={item.liveLink} className="" target="_blank">
+                          <i className="fa-solid text-sky-500 text-5xl hover:text-sky-600 fa-square-arrow-up-right"></i>
+                        </a>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -75,20 +82,49 @@ const ProjectsCard = ({ projects, visibility, videos }) => {
             </div>
 
             <div className="flex justify-between flex-wrap ">
-              <a
-                href={item.githubLink}
-                target="_blank"
-                className="border border-primary rounded-3xl px-4 sm:px-6 md:px-8 py-2 hover:border-primary-hover hover:bg-primary hover:text-white text-primary "
-              >
-                Github <i className="fa-solid ms-2 fa-up-right-from-square"></i>
-              </a>
-              <Button
-                bgColor="bg-none"
-                className="border px-4 sm:px-6 md:px-8 py-2 border-primary hover:border-primary-hover hover:bg-primary hover:text-white text-primary"
-                onClick={() =>{ dispatch(toggle(true)); setVideoId(item.heading)} } 
-              >
-                Video <i className="fa-solid ms-2 fa-up-right-from-square"></i>
-              </Button>
+              {item.githubLink === "" ? (
+                <Button
+                  disabled={true}
+                  target="_blank"
+                  className="border border-gray-500 !cursor-not-allowed hover:border-gray-400  rounded-3xl px-4 sm:px-6 md:px-8 py-2 "
+                  bgColor="bg-none text-gray-400 hover:!bg-gray-700"
+                >
+                  Github{" "}
+                  <i className="fa-solid ms-2 fa-up-right-from-square"></i>
+                </Button>
+              ) : (
+                <a
+                  href={item.githubLink}
+                  target="_blank"
+                  className="border border-primary rounded-3xl px-4 sm:px-6 md:px-8 py-2 hover:border-primary-hover hover:bg-primary hover:text-white text-primary "
+                >
+                  Github{" "}
+                  <i className="fa-solid ms-2 fa-up-right-from-square"></i>
+                </a>
+              )}
+
+              { !videos[item.heading] || videos[item.heading] === "" ? (
+                <Button
+                  disabled={true}
+                  className="border border-gray-500 !cursor-not-allowed hover:border-gray-400  rounded-3xl px-4 sm:px-6 md:px-8 py-2 "
+                  bgColor="bg-none text-gray-400 hover:!bg-gray-700"
+                >
+                  Video{" "}
+                  <i className="fa-solid ms-2 fa-up-right-from-square"></i>
+                </Button>
+              ) : (
+                <Button
+                  bgColor="bg-none"
+                  className={`border px-4 sm:px-6 md:px-8 py-2  border-primary hover:border-primary-hover hover:bg-primary hover:text-white text-primary`}
+                  onClick={() => {
+                    dispatch(toggle(true));
+                    setVideoId(item.heading);
+                  }}
+                >
+                  Video{" "}
+                  <i className="fa-solid ms-2 fa-up-right-from-square"></i>
+                </Button>
+              )}
             </div>
           </div>
         ))}
@@ -97,11 +133,15 @@ const ProjectsCard = ({ projects, visibility, videos }) => {
         <Modal>
           <div
             className={`relative flex justify-center items-center transition-transform duration-500 ${
-              isRotated ? "rotate-90 w-full h-2/4 border-2" : "w-4/5 h-auto"
+              isRotated
+                ? [...Object.keys(videos)].includes(videoId)
+                  ? "rotate-90 transition ease-in-out duration-500   w-full sm:w-9/12 sm:h-auto"
+                  : "w-4/5 h-auto"
+                : "w-4/5 h-auto"
             }`}
           >
             <video
-              className="w-full h-full max-h-[95vh] max-w-[95vw] rounded-lg"
+              className="w-full h-full sm:max-h-[95vh] sm:max-w-[95vw] rounded-lg"
               autoPlay
               controls
             >
@@ -109,10 +149,13 @@ const ProjectsCard = ({ projects, visibility, videos }) => {
             </video>
 
             <button
-              className="absolute top-0 right-0 bg-gray-900 hover:bg-primary-hover border-2 hover:border-primary-hover w-10 h-10 rounded-full text-white cursor-pointer z-10"
+              className={`absolute -top-10 -right-10 bg-gray-900 hover:bg-primary-hover border-2 hover:border-primary-hover w-10 h-10 rounded-full text-white cursor-pointer z-10 ${
+                isRotated &&
+                "top-1/2  -right-[15%] -translate-x-1/2 -translate-y-1/2 transition linear duration-500"
+              }`}
               onClick={() => dispatch(toggle(false))}
             >
-<i className="fa-solid fa-xl fa-xmark"></i>
+              <i className="fa-solid fa-xl fa-xmark"></i>
             </button>
           </div>
         </Modal>
@@ -121,4 +164,8 @@ const ProjectsCard = ({ projects, visibility, videos }) => {
   );
 };
 
+ProjectsCard.defaultProps = {
+  videos: {},
+  images: {},  
+}
 export default ProjectsCard;

@@ -13,8 +13,8 @@ const Home = () => {
     <div className='w-full sm:max-w-8/12 md:max-w-12/12 lg:max-w-10/12 mx-auto sm:p-6 text-white shadow-lg '>
      <HeroSection/> 
       <About/>
-     <Skills/>
      <Projects />
+     <Skills/>
      <Contacts/>
      <Footer/>
     </div>
