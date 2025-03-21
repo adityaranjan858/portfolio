@@ -7,12 +7,13 @@ import todoImages from "../assets/ToDo Project.png";
 import urbantrendImages from "../assets/urban trend project.png";
 import devDineImages from "../assets/devdineproject.png";
 import portfolioImages from "../assets/portfolio.png";
+import urbanTrendVideo from "../assets/Urban Trend Video.mp4";
 
 const Projects = () => {
   const {projects, isLoading, error, isVisible} = useSelector( state => state.projects)
   const videos = {
     // Key should be same as project heading
-    "Urban Trend Store App": "",
+    "Urban Trend Store App": urbanTrendVideo,
     "ToDo App": "",
     "Portfolio": "",
     "Dev Dine" : "",

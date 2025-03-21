@@ -3,15 +3,20 @@
 ## Overview
 This is my personal portfolio website built using **React, Vite, and TailwindCSS**. The portfolio showcases my projects, skills, and experiences with a modern and dynamic UI.
 
+## Live Demo
+You can see the live **Portfolio** here: [Portfolio](https://portfolio-aditya-v1.vercel.app/) 
+
 ## Features
 - **React + Vite:** Fast development and optimized build process.
 - **TailwindCSS:** Utility-first CSS framework for styling.
 - **Mock API:** Used to simulate real API calls for project data.
 - **Redux Toolkit:** State management for efficient data handling.
 - **Admin Dashboard:** Secure dashboard for managing portfolio content.
+- **Firebase:** Set up and manage authentication systems, including Firebase Authentication
 - **Dynamic Project Section:** Fetches and displays projects dynamically.
 - **React Router:** Enables seamless client-side routing.
 - **Lazy Loading:** Improves performance by loading components on demand.
+
 
 ## Installation & Setup
 
