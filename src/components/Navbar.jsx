@@ -109,10 +109,10 @@ const Navbar = () => {
                     Home
                   </Link>
                   <Link
-                    to="/admin"
+                    to="/signIn"
                     className="text-gray-300 hover:text-white hover:bg-gray-700 px-4 py-2 rounded-md"
                   >
-                    Admin
+                    Sign In
                   </Link>
                 </div>
               </div>
@@ -132,11 +132,11 @@ const Navbar = () => {
                     Home
                   </Link>
                   <Link
-                    to="/admin"
+                    to="/signIn"
                     className="block px-3 py-2 text-base text-gray-300 hover:text-white hover:bg-gray-700 rounded-3xl"
                     onClick={() => dispatch(toggleMenu())}
                   >
-                    Admin
+                    Sign In
                   </Link>
                 </>
               )}

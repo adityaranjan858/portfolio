@@ -31,8 +31,6 @@ const ProjectsCard = ({ projects, visibility, videos, images }) => {
     }
   }, [visibility, isMobile]);
 
-  console.log(images);
-  console.log(projects);
 
   return (
     <>

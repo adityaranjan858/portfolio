@@ -6,6 +6,8 @@ import ShimmerProjectsCard from "../utils/ShimmerProjectsCard";
 import todoImages from "../assets/ToDo Project.png";
 import urbantrendImages from "../assets/urban trend project.png";
 import devDineImages from "../assets/devdineproject.png";
+import portfolioImages from "../assets/portfolio.png";
+
 const Projects = () => {
   const {projects, isLoading, error, isVisible} = useSelector( state => state.projects)
   const videos = {
@@ -19,7 +21,7 @@ const Projects = () => {
     // Key should be same as project heading
     "Urban Trend Store App": urbantrendImages,
     "ToDo App": todoImages,
-    "Portfolio": "",
+    "Portfolio": portfolioImages,
     "Dev Dine": devDineImages,
   }
 

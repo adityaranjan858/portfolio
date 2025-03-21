@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import Sidebar from './sidebar/Sidebar';
 import { Outlet } from 'react-router';
+import SignOut from './SignOut';
 
 const Admin = () => {
 
@@ -9,6 +10,7 @@ const Admin = () => {
   },[])
   return (
     <>
+    <SignOut/> 
       <div className="flex flex-col sm:flex-row min-h-screen">
         <div className="w-full bg-gray-900 text-white  sm:w-2/5   ms-4 pe-4 md:w-1/5">
           <Sidebar />

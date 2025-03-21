@@ -4,6 +4,8 @@ import { Route, Routes } from "react-router";
 import Home from "./components/Home";
 import { lazy, Suspense } from "react";
 import PageNotFound from "./utils/PageNotFound";
+import SignIn from "./admin panel/SignIn";
+import ProtectedRoute from "./admin panel/ProtectedRoute";
 
 function App() {
 
@@ -20,15 +22,16 @@ const About = lazy(() => import("./components/About"));
 const Projects = lazy(() => import("./components/Projects"));
 const Contacts = lazy(() => import("./components/Contacts"));
 
+
   return (
     <>
-      <Navbar />
       <Suspense fallback={<div className="text-center mt-10">Loading...</div>}>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/signIn" element={<SignIn />} />
 
         {/* Admin  */}
-        <Route path="/admin" element={<Admin />}>
+        <Route path="/admin" element={<ProtectedRoute> <Admin /> </ProtectedRoute>}>
           <Route index element={<Dashboard />} />
 
           <Route path="projectsComp" element={<Suspense fallback={<div className="text-center mt-10">Loading Projects...</div>}> <ProjectsComp /> </Suspense>} >
