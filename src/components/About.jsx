@@ -11,8 +11,8 @@ const About = () => {
             in <span className="text-primary ">React.js</span>  and <span className="text-primary ">JavaScript</span> , I enjoy transforming ideas into visually
             engaging and functional interfaces. My journey in tech has been
             driven by continuous learning, problem-solving, and a passion for
-            building interactive digital experiences. Despite a 1.8-year career
-            gap, I've remained committed to honing my skills and staying
+            building interactive digital experiences. Despite a career
+            gap nearly two years, I've remained committed to honing my skills and staying
             up-to-date with the latest advancements in frontend development.
           </p>
 
@@ -27,7 +27,7 @@ const About = () => {
               </div>
               <div>
                 <div className="flex items-center">
-                  <span className="text-4xl font-bold">2.8</span>
+                  <span className="text-4xl font-bold">1.8</span>
                   {/* <span className="text-primary text-3xl font-bold">+</span> */}
                 </div>{" "}
                 <small className="font-bold  text-gray-400 ">Years of Experience</small>

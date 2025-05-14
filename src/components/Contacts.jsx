@@ -26,7 +26,7 @@ const Contacts = () => {
                 <i className="fa-brands fa-github"></i>
               </a>
               <a
-                href="https://www.linkedin.com/in/aditya-ranjan-7b1785203/"
+                href="https://www.linkedin.com/in/aditya-r-7b1785203/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white p-3 rounded-full transition hover:text-primary border border-gray-900 hover:border-primary flex items-center justify-center w-10 h-10"
