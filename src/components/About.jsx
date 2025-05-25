@@ -27,7 +27,7 @@ const About = () => {
               </div>
               <div>
                 <div className="flex items-center">
-                  <span className="text-4xl font-bold">1.8</span>
+                  <span className="text-4xl font-bold">2.8</span>
                   {/* <span className="text-primary text-3xl font-bold">+</span> */}
                 </div>{" "}
                 <small className="font-bold  text-gray-400 ">Years of Experience</small>
